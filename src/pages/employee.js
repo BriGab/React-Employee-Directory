@@ -71,7 +71,7 @@ const Employee = () => {
     return (
         <>
             <div className="input-group mb-3">
-                <input onChange={handleChange} name="search" type="text" className="form-control" placeholder="type in an employee's name" aria-label="type in an employee's name" aria-describedby="basic-addon2"></input>
+                <input onChange={handleChange} name="search" type="text" className="form-control" placeholder="Start typing any employee information" aria-label="type in an employee's name" aria-describedby="basic-addon2"></input>
 
             </div>
             <table className="table table-striped">
