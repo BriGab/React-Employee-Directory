@@ -2,26 +2,13 @@ import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import moment from 'moment';
 
-//Things that need to change state: 
-// search box
-// output of api
-// 
-
 
 const Employee = () => {
 
-    // const [searchBox, setSearchBox] = useState("");
     const [state, setState] = useState({
         search: '',
         employees: [],
         filtered: []
-        // emp: {
-        //     profileImg: "",
-        //     name: "",
-        //     phone: 0,
-        //     email: "",
-        //     dob: 0,
-        // }
     })
 
     useEffect(() => {
@@ -62,8 +49,8 @@ const Employee = () => {
             // gather values off the employee object
             filtered: state.employees.filter(emp => {
                 var allEmployeeValues = Object.values(emp)
-                var clearnedEmployeeValues = allEmployeeValues.toString().toLowerCase()
-                return clearnedEmployeeValues.includes(value.toLowerCase())
+                var cleanedEmployeeValues = allEmployeeValues.toString().toLowerCase()
+                return cleanedEmployeeValues.includes(value.toLowerCase())
             })
         })
     }
