@@ -27,7 +27,8 @@ const Employee = () => {
     useEffect(() => {
         getProfileInfo();
         //call whatever we want to originally load on the page
-    }, [])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
 
     const getProfileInfo = () => {
         API.getEmployees()
@@ -87,7 +88,7 @@ const Employee = () => {
 
                     {
                         state.filtered.map((empProfile, i) => <tr key={i + "-employees"}>
-                            <td><img src={empProfile.img}></img></td>
+                            <td><img src={empProfile.img} alt=""></img></td>
                             <td>{empProfile.name}</td>
                             <td>{empProfile.phone}</td>
                             <td>{empProfile.email}</td>
