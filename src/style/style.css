@@ -1,0 +1,18 @@
+body {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+#container {
+   padding: 4%;
+   display: inline-block;
+   text-align: center;
+}
+#tableWrapper {
+    border-right: #dee2e6 solid 2px;
+    border-left: #dee2e6 solid 2px;
+    text-align: center;
+}
+
+

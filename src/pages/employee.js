@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../style/style.css"
 import API from "../utils/API";
 import moment from 'moment';
 
@@ -21,7 +22,7 @@ const Employee = () => {
         API.getEmployees()
             // .then(res => setEmpProfile({...empProfile, first: res.data.results[0].name.first }));
             .then(res => {
-
+                    console.log(res.data.results)
                 var mapped = res.data.results.map(emp => ({
                     img: emp.picture.thumbnail,
                     name: emp.name.first + " " + emp.name.last,
@@ -56,13 +57,14 @@ const Employee = () => {
     }
 
     return (
-        <>
-            <div className="input-group mb-3">
+        <div id="container">
+            <div className="input-group mb-3 cont">
                 <input onChange={handleChange} name="search" type="text" className="form-control" placeholder="Start typing any employee information" aria-label="type in an employee's name" aria-describedby="basic-addon2"></input>
 
             </div>
-            <table className="table table-striped">
-                <thead>
+            <div id="tableWrapper">
+            <table className="table mb-3 table-striped">
+                <thead className="cont">
                     <tr>
                         <th scope="col">Profile Image</th>
                         <th scope="col">Name</th>
@@ -71,7 +73,7 @@ const Employee = () => {
                         <th scope="col">Date of Birth</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="cont">
 
                     {
                         state.filtered.map((empProfile, i) => <tr key={i + "-employees"}>
@@ -85,7 +87,8 @@ const Employee = () => {
 
                 </tbody>
             </table>
-        </>
+            </div>
+        </div>
     )
 }
 
