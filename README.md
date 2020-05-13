@@ -1,6 +1,5 @@
 # React-Employee-Directory
 
-Here is the deployed application: 
 [Check out Employee Directory on Heroku!](https://mighty-cove-87859.herokuapp.com/)
 
 This react app provides a searchable employee directory to easily pull up individual employees' personal information. 
